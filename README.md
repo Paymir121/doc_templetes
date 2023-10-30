@@ -12,7 +12,7 @@
 
 #### Установите и активируйте виртуальное окружение WINDOWS
 ```
-python -m venv venv
+python3.9 -m venv venv
 ```
 
 ```
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 #### Установите и активируйте виртуальное окружение MAC OS
 ```
-python3 -m venv venv
+python3.9 -m venv venv
 ```
 
 ```
