@@ -13,17 +13,17 @@ def read_context():
     return context
 
 def render_word_file(context):
-    print("<----------------------Погнали----------------------------------->")
-    docs_files = glob.glob('*.docx')
+    docs_files = glob.glob('*.docx') # Читаем все имена файлов *.docx
     for file_name in docs_files:
         print(f"<----------------------Делаем красиво с  {file_name}----------------------------------->")
-        doc = DocxTemplate(file_name)
-        doc.render(context)
-        doc.save('filled_'+file_name)
-        print(f"<----------------------Сделано красиво с  {file_name}----------------------------------->")
+        doc = DocxTemplate(file_name) # Читаем файл
+        doc.render(context) # Производим замену name на data
+        doc.save('filled_'+file_name) # Сохраняем файл с именем filled_{file_name}
+        print(f"<----------------------Сделано красиво с  {file_name}---------------------------------->")
 
-    print("<----------------------Конец----------------------------------->")
 
 if __name__ == '__main__':
+    print("<----------------------Погнали----------------------------------->")
     context = read_context()
     render_word_file(context)
+    print("<----------------------Конец--------------------___--------------->")
