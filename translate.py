@@ -1,14 +1,18 @@
 import requests
 import json
-import deepl 
+import deepl
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def translate_yandex(rus_text):
     """Яндекс перевод"""
     if rus_text == '':
         return ''
-    IAM_TOKEN = "t1.9euelZqLiseenJWRzMqKmMuXxpaPku3rnpWax56Qzc-Nx5ueksfHic2Ty53l9PdyA1VT-e8qXGGc3fT3MjJSU_nvKlxhnM3n9euelZqNi8mXj4-Rz52UyMiQm5TLiu_8xeuelZqNi8mXj4-Rz52UyMiQm5TLig.owRRfOfKJoLuLSF_XmhooIt_t26_cUjgA5IRX_qDI8LIS6hgiYe_2b7zBHFkRI9jt0R5l-1HEPTkiuKiyGL_Cg"
-    folder_id = "b1gvu7iq6bjdf7jn5e6o"
+    IAM_TOKEN = os.getenv('IAM_TOKEN')
+    folder_id = os.getenv('folder_id')
     target_language = 'en'
     texts = [rus_text]
 
