@@ -15,12 +15,14 @@ def read_context():
         context[name] = data
     return context
 
+
 def render_word_file(context):
     docs_files = glob.glob('*.docx') # Читаем все имена файлов *.docx
     for file_name in docs_files:
         if re.search(r'filled_', file_name) is None:
             print(f"<----------------------Делаем красиво с  {file_name}----------------------------------->")
             doc = DocxTemplate(file_name) # Читаем файл
+            print(context)
             doc.render(context) # Производим замену name на data
             doc.save('filled_'+file_name) # Сохраняем файл с именем filled_{file_name}
             print(f"<----------------------Сделано красиво с  {file_name}---------------------------------->")

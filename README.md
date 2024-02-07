@@ -12,29 +12,38 @@
 
 #### Установите и активируйте виртуальное окружение WINDOWS
 ```
-python3.9 -m venv venv
+    python3.9 -m venv venv
 ```
 
 ```
-source venv/Scripts/activate
+    source venv/Scripts/activate
 ```
 ### Установите зависимости из файла requirements.txt
 ```
-pip install -r requirements.txt
+    pip install -r requirements.txt
 ```
 
 #### Установите и активируйте виртуальное окружение MAC OS
 ```
-python3.9 -m venv venv
+    python3.9 -m venv venv
 ```
 
 ```
-source venv/bin/activate
+    source venv/bin/activate
 ```
 
 # Установите зависимости из файла requirements.txt
 ```
-pip install -r requirements.txt
+    pip install -r requirements.txt
+```
+# Запуск
+```
+    python main.py
+```
+
+# Получить токен
+```
+    yc iam create-token 
 ```
 ### Авторы
 Никки и Никонор
