@@ -59,4 +59,3 @@ def translate(rus_text):
 
 ### Для Теста
 translate("первый человек")
-
